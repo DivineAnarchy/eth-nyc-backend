@@ -73,7 +73,8 @@ export default function(server, opts, done) {
 		const { image: imageBase64, metadata } = await draw(request.body.layers, request.body.name, request.body.description);
 
 		const ipfs_uri = await uploadIpfs(metadata);
-		return signUriChange(request.body.wallet, request.body.tokens, ipfs_uri);
+		const signArgs = await signUriChange(request.body.wallet, request.body.tokens, ipfs_uri);
+		return { ...signArgs, imageBase64 };
 	});
 
 	server.post('/build', async(request) => {

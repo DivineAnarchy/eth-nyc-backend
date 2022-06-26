@@ -1,9 +1,13 @@
 {
   "dependencies": {
+    "@pinata/sdk": "^1.1.26",
     "canvas": "^2.9.3",
     "dotenv": "^16.0.1",
+    "ethers": "^5.6.9",
     "fastify": "^4.1.0",
+    "form-data": "^4.0.0",
     "make-promises-safe": "^5.1.0",
+    "node-fetch": "^3.2.6",
     "nodemon": "^2.0.18"
   },
   "scripts": {
